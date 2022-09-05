@@ -126,7 +126,7 @@ function generateRandomDrink(values: Number[]) {
 
 input.onButtonPressed(Button.A, function () {
 
-    let names = ["Bona", "Vanessa", "Alice", "Nolan", "Chris", "Vannak", "Khoa", "Tin Tin", "Lam", "Kenny", "Matthew", "Shayan", "Jack", "Connor", "Kenneth"]
+    let names = ["Dan", "Dongjae", "William", "Khang", "Dipper"]
     for (let i = 0; i < names.length; i++) {
         let drinkIndices = [0, 1]
         serial.writeLine("******************************************")
