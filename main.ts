@@ -1,11 +1,9 @@
 function generateRandomDrink(values: Number[]) {
-
     let drinkIndex: Number = values[Math.round(Math.randomRange(0, values.length - 1))]
     let drinkString = ""
 
     switch (drinkIndex) {
         case 0: {
-
             // a good cup of coffee with a size and strength of Mr. Weinberg's choosing
             let sizeIndex = Math.randomRange(0, 2)
             let strengthIndex = Math.randomRange(0, 1)
@@ -13,24 +11,18 @@ function generateRandomDrink(values: Number[]) {
             let strengthString: String = ""
 
             switch (sizeIndex) {
-
                 case 0: {
                     sizeString = "small"
                     break;
                 }
-
                 case 1: {
                     sizeString = "medium"
                     break;
                 }
-
                 default: {
                     sizeString = "Mr. Wolf sized"
                     break;
                 }
-
-
-
             }
 
             switch (strengthIndex) {
@@ -38,14 +30,11 @@ function generateRandomDrink(values: Number[]) {
                     strengthString = "normal"
                     break;
                 }
-
                 case 1: {
                     strengthString = "sleepy"
                     break;
                 }
-
             }
-
 
             drinkString = sizeString + " coffee of " + strengthString + " strength"
             break;
@@ -56,26 +45,19 @@ function generateRandomDrink(values: Number[]) {
             let sizeString: String = ""
 
             switch (sizeIndex) {
-
                 case 0: {
                     sizeString = "small"
                     break;
                 }
-
                 case 1: {
                     sizeString = "medium"
                     break;
                 }
-
                 default: {
                     sizeString = "Mr. Wolf sized"
                     break;
                 }
-
-
-
             }
-
             drinkString = sizeString + " cup of soda"
             break;
         }
@@ -99,33 +81,24 @@ function generateRandomDrink(values: Number[]) {
             let sizeString: String = ""
 
             switch (sizeIndex) {
-
                 case 0: {
                     sizeString = "small"
                     break;
                 }
-
                 case 1: {
                     sizeString = "medium"
                     break;
                 } //oops, did I not use default here? I guess you don't have to always do that.
-
-
             }
             drinkString = sizeString + " cup of sparkling water at 10 ˚C"
             break;
         }
-
     }
     //serial.writeLine(drinkString)
     return drinkString
 }
 
-
-
-
 input.onButtonPressed(Button.A, function () {
-
     let names = ["Dan", "Dongjae", "William", "Khang", "Dipper"]
     for (let i = 0; i < names.length; i++) {
         let drinkIndices = [0, 1]
@@ -134,11 +107,7 @@ input.onButtonPressed(Button.A, function () {
         serial.writeLine(" a " + generateRandomDrink(drinkIndices))
         drinkIndices = [2, 3, 4]
         serial.writeLine("and a " + generateRandomDrink(drinkIndices))
-
-
     }
-
 })
 
-
-
+serial.writeLine("Press button A!")
